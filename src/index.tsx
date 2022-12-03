@@ -1,11 +1,13 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom"
+import * as ReactDOM from "react-dom/client"
 import FirstComponent from './components/FirstComponent'
+import Layout from './components/structure/Layout/Layout';
 
-ReactDOM.render(
-    <div>
-        <h1>Hello world!</h1>
-        <FirstComponent></FirstComponent>
-    </div>,
-    document.getElementById("root")
-)
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <Layout>
+        test
+    </Layout>
+  </React.StrictMode>
+);
