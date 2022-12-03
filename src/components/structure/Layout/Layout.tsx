@@ -1,14 +1,17 @@
 import React from 'react';
 
-interface AppProps {
-    children: React.FC;
+interface Props {
+    children?: React.ReactElement | React.ReactElement[] | string | string[];
+    testText?: string
 }
 
-const Layout = ({children}: AppProps) => {
+const Layout = ({children, testText}: Props) => {
     return(
         <>
-            <h1>test</h1>
-            {children}
+            <h1>{testText}</h1>
+            {
+                typeof children == 'string' ? <p>{children}</p> : {children}
+            }
         </>
         
     )
