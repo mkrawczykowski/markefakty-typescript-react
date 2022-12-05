@@ -19,4 +19,3 @@ module.exports = {
     },
     mode: 'development'
 };
-
